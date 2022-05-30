@@ -1,0 +1,21 @@
+	input:focus, select:focus {
+			color: #052c3f;
+			border-bottom: 2px solid #85b0be;
+		}
+		input[type=submit]{
+			background: #85b0be;
+			 float: right;
+		}
+		input[type=button] {
+			background: #85b0be;
+			float: left;
+		}
+		body {
+			background-image: url("../images/prison2.jpeg");
+		}
+		.submit:hover {
+			background: #052c3f;
+		}
+		h2, h3 {
+			color: #052c3f;
+		}

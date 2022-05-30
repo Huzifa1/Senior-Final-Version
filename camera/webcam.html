@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+
+  <title>Camera B-3</title>
+
+  <!-- Favicons -->
+  <link href="assets/img/TOicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+ 
+</head>
+
+<body>
+
+    
+    <div>
+        <video muted autoplay width="60%" height="60%" id="videoElement" class="videoElement"  style="margin-left: 20%; text-align: center;">
+        </video>
+      </div>
+    </br>
+    <div style="color: #052c3f ; text-align: center;">
+      <h3>
+        <b>CAM B-2</b>
+      </h3>
+    </div>
+      
+
+
+    </body>
+
+    </html>
+  <script>
+    let video = document.querySelector("#videoElement");
+
+    if(navigator.mediaDevices.getUserMedia){
+      navigator.mediaDevices.getUserMedia({video:true}).then(function(stream){
+        video.srcObject = stream;
+      })
+      .catch (function(error){
+        console.log("Something went wrong!");
+      })
+    } else {
+      console.log("getUserMedia not supported!");
+    }
+
+
+  </script>
